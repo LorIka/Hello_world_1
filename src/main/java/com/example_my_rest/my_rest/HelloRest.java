@@ -1,20 +1,14 @@
 package com.example_my_rest.my_rest;
 
 public class HelloRest {
-    public HelloRest(long id, String content) {
-        this.id = id;
-        this.content = content;
+    public HelloRest(String text) {
+        this.text = text;
     }
 
-    public long getId() {
-        return id;
+    public String getText() {
+        return text;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    private final long id;
-    private final String content;
+    private final String text;
 
 }
