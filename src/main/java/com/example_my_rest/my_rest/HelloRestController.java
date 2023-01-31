@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloRestController {
 
     @RequestMapping("/helloRest")
-    public HelloRest helloRest(@RequestParam(value = "name",required = false,defaultValue = "World")String name){
-        return new HelloRest(counter.incrementAndGet(), String.format(template, name));
+    public HelloRest helloRest(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
+        return new HelloRest("Hello, " + name + "!!!");
     }
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 }
